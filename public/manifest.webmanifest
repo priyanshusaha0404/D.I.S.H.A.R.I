@@ -1,0 +1,49 @@
+{
+  "name": "D.I.S.H.A.R.I — Sundarbans smart trip",
+  "short_name": "D.I.S.H.A.R.I",
+  "description": "Interactive atlas and decision support for the Indian Sundarbans — online and offline, in English and Bengali.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0f1e",
+  "theme_color": "#0a0f1e",
+  "lang": "en",
+  "categories": [
+    "education",
+    "navigation",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Route planner",
+      "url": "/route/"
+    },
+    {
+      "name": "Dashboard",
+      "url": "/dashboard/"
+    },
+    {
+      "name": "Reports",
+      "url": "/reports/"
+    }
+  ]
+}

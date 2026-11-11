@@ -1,0 +1,21 @@
+# Render Blueprint — D.I.S.H.A.R.I Sundarbans smart trip.
+# One Node web service: builds the static site and runs server.mjs (serves the site + the AI assistant at /api/ai).
+# Put your key in the Render dashboard → Environment → GEMINI_API_KEY (never in the code).
+services:
+  - type: web
+    name: dishari-trip
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: node server.mjs
+    healthCheckPath: /api/ai/health
+    pullRequestPreviewsEnabled: false
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-flash-latest
